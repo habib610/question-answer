@@ -32,14 +32,20 @@ h2{
     justify-content: space-between;
     padding: 10px;
     border-bottom: 2px solid teal;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+p{
+    padding: 10px 20px;
 }
 .text{
     background-color: brown;
-    padding: 20px 10px;
     color: white;
-    min-height: 100px;
+    height: 0px;
     transition: all ease 1s;
-    display: none;
+    overflow: hidden;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 article.question{
     margin-bottom: 20px;
@@ -61,12 +67,16 @@ article.question{
     display: none;
 }
 .display .text{
-    display: block;
+   height: 100px;
 }
-
 .display .minus{
     display: block;
 }
 .display .plus{
     display: none;
+}
+@media (max-width: 766px){
+    .display .text{
+       height: 210px;
+    }
 }
